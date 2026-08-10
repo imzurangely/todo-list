@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Sistema de diseno.
+ * Color principal: rosa #F1889B. Superficies blancas en claro,
+ * neutros profundos en oscuro. Todos los componentes usan estos tokens.
+ */
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #fef3f5;
+  --color-brand-100: #fde6ea;
+  --color-brand-200: #fbccd6;
+  --color-brand-300: #f7a8b9;
+  --color-brand-400: #f1889b;
+  --color-brand-500: #e56b81;
+  --color-brand-600: #d24d66;
+  --color-brand-700: #b03a51;
+  --color-brand-800: #8d3143;
+  --color-brand-900: #6f2937;
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+
+  --shadow-soft: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.12);
+  --shadow-brand: 0 10px 30px -12px rgb(241 136 155 / 0.55);
+}
+
+:root {
+  --surface: #fbf9fa;
+  --surface-muted: #f4f1f2;
+  --card: #ffffff;
+  --line: #e9e3e5;
+  --ink: #1f1b1d;
+  --ink-soft: #4d4548;
+  --ink-muted: #8a8083;
+}
+
+.dark {
+  --surface: #131114;
+  --surface-muted: #1b181b;
+  --card: #1f1c20;
+  --line: #322d32;
+  --ink: #f6f3f4;
+  --ink-soft: #cfc7ca;
+  --ink-muted: #988f93;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    transition: background-color 250ms ease, color 250ms ease;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-400);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brand-200);
+    color: var(--color-brand-900);
+  }
+}
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
