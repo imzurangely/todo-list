@@ -36,7 +36,7 @@ export default function FoldersPage() {
       ) : folders.length === 0 ? (
         <EmptyState
           icon={FolderPlus}
-          title="Aun no tienes carpetas"
+          title="Aún no tienes carpetas"
           description="Crea tu primera carpeta para organizar tus tareas."
           actionLabel="Nueva carpeta"
           onAction={actions.openCreate}

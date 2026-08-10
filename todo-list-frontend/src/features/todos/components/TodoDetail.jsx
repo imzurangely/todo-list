@@ -41,7 +41,7 @@ export default function TodoDetail({ todo, open, onClose, onToggle, onEdit, onDe
     >
       <div className="space-y-4">
         <p className="whitespace-pre-line text-sm leading-relaxed text-ink-soft">
-          {todo.description || "Esta tarea no tiene descripcion."}
+          {todo.description || "Esta tarea no tiene descripción."}
         </p>
 
         <div>
@@ -60,7 +60,7 @@ export default function TodoDetail({ todo, open, onClose, onToggle, onEdit, onDe
             <Badge icon={CalendarDays}>{formatDate(todo.due_date)}</Badge>
           </DetailRow>
           <DetailRow label="Creada">{formatDate(todo.created_at)}</DetailRow>
-          <DetailRow label="Ultima actualizacion">{formatDate(todo.updated_at)}</DetailRow>
+          <DetailRow label="Ultima actualización">{formatDate(todo.updated_at)}</DetailRow>
         </div>
       </div>
     </Modal>

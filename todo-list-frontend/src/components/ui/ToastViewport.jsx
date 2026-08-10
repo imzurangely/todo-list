@@ -12,7 +12,7 @@ export default function ToastViewport({ toasts, onDismiss }) {
     <div
       aria-live="polite"
       aria-atomic="true"
-      className="pointer-events-none fixed inset-x-4 bottom-4 z-[60] flex flex-col items-center gap-2 sm:inset-x-auto sm:right-6 sm:items-end"
+      className="pointer-events-none fixed inset-x-4 bottom-4 z-60 flex flex-col items-center gap-2 sm:inset-x-auto sm:right-6 sm:items-end"
     >
       <AnimatePresence initial={false}>
         {toasts.map(({ id, message, variant }) => {

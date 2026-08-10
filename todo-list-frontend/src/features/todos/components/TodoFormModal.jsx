@@ -35,13 +35,13 @@ export default function TodoFormModal({ open, onClose, todo, defaultFolderId }) 
       open={open}
       onClose={onClose}
       title={todo ? "Editar tarea" : "Nueva tarea"}
-      description={todo ? "Actualiza los datos de la tarea." : "Completa la informacion de tu nueva tarea."}
+      description={todo ? "Actualiza los datos de la tarea." : "Completa la información de tu nueva tarea."}
     >
       {folders.length === 0 ? (
         <EmptyState
           icon={FolderPlus}
           title="Primero crea una carpeta"
-          description="Las tareas se organizan dentro de carpetas. Crea una carpeta desde el menu lateral para comenzar."
+          description="Las tareas se organizan dentro de carpetas. Crea una carpeta desde el menú lateral para comenzar."
         />
       ) : (
         <TodoForm

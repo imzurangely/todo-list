@@ -23,8 +23,8 @@ export default function LoginPage() {
 
   const validate = () => {
     const nextErrors = {};
-    if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) nextErrors.email = "Ingresa un correo valido";
-    if (!values.password) nextErrors.password = "La contrasena es obligatoria";
+    if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) nextErrors.email = "Ingresa un correo válido";
+    if (!values.password) nextErrors.password = "La contraseña es obligatoria";
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   };
@@ -47,11 +47,11 @@ export default function LoginPage() {
 
   return (
     <AuthLayout
-      title="Iniciar sesion"
+      title="Iniciar sesión"
       subtitle="Accede para gestionar tus tareas, carpetas y notas."
       footer={
         <>
-          No tienes cuenta?{" "}
+          ¿No tienes cuenta?{" "}
           <Link to="/registro" className="font-semibold text-brand-600 hover:underline dark:text-brand-300">
             Crear una cuenta
           </Link>
@@ -70,7 +70,7 @@ export default function LoginPage() {
           error={errors.email}
         />
         <Input
-          label="Contrasena"
+          label="Contraseña"
           name="password"
           type="password"
           autoComplete="current-password"
@@ -85,7 +85,7 @@ export default function LoginPage() {
       </form>
 
       <p className="mt-4 rounded-xl bg-surface-muted px-3 py-2 text-xs text-ink-muted">
-        Cuenta de demostracion: <strong>demo@todolist.dev</strong> / <strong>demo1234</strong>
+        Cuenta de demostración: <strong>demo@todolist.dev</strong> / <strong>demo1234</strong>
       </p>
     </AuthLayout>
   );

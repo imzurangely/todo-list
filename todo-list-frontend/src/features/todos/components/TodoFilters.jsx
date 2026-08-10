@@ -16,8 +16,8 @@ export default function TodoFilters({ filters, onChange, resultCount }) {
             type="search"
             value={filters.search}
             onChange={(event) => onChange({ search: event.target.value })}
-            placeholder="Buscar por titulo..."
-            aria-label="Buscar tareas por titulo"
+            placeholder="Buscar por título..."
+            aria-label="Buscar tareas por título"
             className="h-10 w-full rounded-xl border border-line bg-card pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-400/15"
           />
         </div>

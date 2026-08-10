@@ -34,7 +34,7 @@ export default function TodoModals({ actions, defaultFolderId }) {
         onConfirm={actions.confirmDelete}
         loading={actions.deleting}
         title="Eliminar tarea"
-        message={`Estas segura de que deseas eliminar "${actions.pendingDelete?.title ?? ""}"? Esta accion no se puede deshacer.`}
+        message={`¿Estas segura de que deseas eliminar "${actions.pendingDelete?.title ?? ""}"? Esta acción no se puede deshacer.`}
       />
     </>
   );

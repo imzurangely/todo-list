@@ -126,15 +126,15 @@ export default function DashboardPage() {
         <section className="space-y-3" aria-label="Proximas tareas">
           <div className="flex items-center gap-2">
             <CalendarClock className="h-4.5 w-4.5 text-brand-500" aria-hidden="true" />
-            <h2 className="text-lg font-semibold text-ink">Proximas tareas</h2>
+            <h2 className="text-lg font-semibold text-ink">Próximas tareas</h2>
           </div>
           {loading ? (
             <SkeletonList rows={3} />
           ) : (
             <TodoList
               todos={upcomingTodos}
-              emptyTitle="Sin fechas proximas"
-              emptyDescription="Asigna fechas a tus tareas para verlas aqui."
+              emptyTitle="Sin fechas próximas"
+              emptyDescription="Asigna fechas a tus tareas para verlas aquí."
               {...listProps}
             />
           )}

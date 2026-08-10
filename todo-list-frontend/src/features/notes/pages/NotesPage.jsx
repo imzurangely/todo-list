@@ -121,7 +121,7 @@ export default function NotesPage() {
         onConfirm={handleDelete}
         loading={deleting}
         title="Eliminar nota"
-        message={`Estas segura de que deseas eliminar la nota "${pendingDelete?.title ?? ""}"? Esta accion no se puede deshacer.`}
+        message={`¿Estas segura de que deseas eliminar la nota "${pendingDelete?.title ?? ""}"? Esta accion no se puede deshacer.`}
       />
     </div>
   );

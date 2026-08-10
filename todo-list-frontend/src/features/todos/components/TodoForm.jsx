@@ -67,7 +67,7 @@ export default function TodoForm({ todo, folders, defaultFolderId, onSubmit, onC
         value={values.title}
         onChange={handleChange}
         error={errors.title}
-        placeholder="Ej. Preparar la presentacion"
+        placeholder="Ej. Preparar la presentación"
         maxLength={120}
         autoFocus
       />

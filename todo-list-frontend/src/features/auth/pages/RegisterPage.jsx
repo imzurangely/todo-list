@@ -23,8 +23,8 @@ export default function RegisterPage() {
   const validate = () => {
     const nextErrors = {};
     if (values.name.trim().length < 2) nextErrors.name = "Ingresa tu nombre";
-    if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) nextErrors.email = "Ingresa un correo valido";
-    if (values.password.length < 6) nextErrors.password = "Minimo 6 caracteres";
+    if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) nextErrors.email = "Ingresa un correo válido";
+    if (values.password.length < 6) nextErrors.password = "Mínimo 6 caracteres";
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   };
@@ -83,11 +83,11 @@ export default function RegisterPage() {
           error={errors.email}
         />
         <Input
-          label="Contrasena"
+          label="Contraseña"
           name="password"
           type="password"
           autoComplete="new-password"
-          placeholder="Minimo 6 caracteres"
+          placeholder="Mínimo 6 caracteres"
           value={values.password}
           onChange={handleChange}
           error={errors.password}

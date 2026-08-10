@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+const BASE_URL = import.meta.env.VITE_API_URL;
 const TOKEN_KEY = "todo_list_token";
 
 export const tokenStorage = {
@@ -24,10 +24,10 @@ api.interceptors.request.use((config) => {
 /** Traduce cualquier fallo de red o de la API a un mensaje amigable. */
 const friendlyMessage = (error) => {
   if (error.code === "ECONNABORTED") {
-    return "La solicitud tardo demasiado. Intenta de nuevo.";
+    return "La solicitud tardó demasiado. Intenta de nuevo.";
   }
   if (!error.response) {
-    return "No pudimos conectar con el servidor. Revisa tu conexion e intenta de nuevo.";
+    return "No pudimos conectar con el servidor. Revisa tu conexión e intenta de nuevo.";
   }
 
   const { status, data } = error.response;
@@ -35,13 +35,13 @@ const friendlyMessage = (error) => {
 
   const byStatus = {
     400: "Revisa los datos ingresados e intenta de nuevo.",
-    401: "Tu sesion ha expirado. Inicia sesion nuevamente.",
-    403: "No tienes permiso para realizar esta accion.",
-    404: "No encontramos la informacion solicitada.",
+    401: "Tu sesión ha expirado. Inicia sesión nuevamente.",
+    403: "No tienes permiso para realizar esta acción.",
+    404: "No encontramos la información solicitada.",
     409: "Ese registro ya existe.",
-    500: "Ocurrio un problema en el servidor. Intenta mas tarde.",
+    500: "Ocurrió un problema en el servidor. Intenta mas tarde.",
   };
-  return byStatus[status] || "Algo no salio como esperabamos. Intenta de nuevo.";
+  return byStatus[status] || "Algo no salió como esperábamos. Intenta de nuevo.";
 };
 
 api.interceptors.response.use(

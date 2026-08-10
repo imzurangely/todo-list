@@ -2,7 +2,7 @@
 export const validateFolderName = (name) => {
   const value = (name || "").trim();
   if (!value) return "El nombre de la carpeta es obligatorio";
-  if (value.length > 60) return "Maximo 60 caracteres";
+  if (value.length > 60) return "Máximo 60 caracteres";
   return null;
 };
 
@@ -10,7 +10,7 @@ export const validateFolderName = (name) => {
 export const buildDeleteFolderMessage = (folder) => {
   const total = folder?.todos_count ?? 0;
   if (total === 0) {
-    return `Estas segura de que deseas eliminar la carpeta "${folder?.name}"? Esta accion no se puede deshacer.`;
+    return `¿Estas segura de que deseas eliminar la carpeta "${folder?.name}"? Esta acción no se puede deshacer.`;
   }
-  return `La carpeta "${folder?.name}" tiene ${total} ${total === 1 ? "tarea asociada" : "tareas asociadas"} que tambien se eliminaran. Esta accion no se puede deshacer.`;
+  return `La carpeta "${folder?.name}" tiene ${total} ${total === 1 ? "tarea asociada" : "tareas asociadas"} que tambien se eliminaran. Esta acción no se puede deshacer.`;
 };

@@ -11,7 +11,7 @@ export default function Logo({ compact = false }) {
           <span className="block truncate font-display text-base font-bold leading-tight text-ink">
             Tareas
           </span>
-          <span className="block truncate text-xs text-ink-muted">Organiza tu dia</span>
+          <span className="block truncate text-xs text-ink-muted">Organiza tu día</span>
         </span>
       )}
     </span>

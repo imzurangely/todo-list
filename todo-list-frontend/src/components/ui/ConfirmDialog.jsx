@@ -7,8 +7,8 @@ export default function ConfirmDialog({
   onClose,
   onConfirm,
   loading = false,
-  title = "Confirmar accion",
-  message = "Esta accion no se puede deshacer.",
+  title = "Confirmar acción",
+  message = "Esta acción no se puede deshacer.",
   confirmLabel = "Eliminar",
 }) {
   return (

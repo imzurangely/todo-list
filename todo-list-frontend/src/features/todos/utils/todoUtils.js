@@ -68,12 +68,12 @@ export const isTodoOverdue = (todo) => !todo.completed && isOverdue(todo.due_dat
 /** Valida el formulario de tarea antes de enviarlo a la API. */
 export const validateTodoForm = (values) => {
   const errors = {};
-  if (!values.title || !values.title.trim()) errors.title = "El titulo es obligatorio";
-  else if (values.title.trim().length > 120) errors.title = "Maximo 120 caracteres";
+  if (!values.title || !values.title.trim()) errors.title = "El título es obligatorio";
+  else if (values.title.trim().length > 120) errors.title = "Máximo 120 caracteres";
   if (!values.folder_id) errors.folder_id = "Selecciona una carpeta";
-  if (!PRIORITY_WEIGHT[values.priority]) errors.priority = "Selecciona una prioridad valida";
+  if (!PRIORITY_WEIGHT[values.priority]) errors.priority = "Selecciona una prioridad válida";
   if (values.due_date && Number.isNaN(Date.parse(values.due_date))) {
-    errors.due_date = "La fecha no es valida";
+    errors.due_date = "La fecha no es válida";
   }
   return errors;
 };

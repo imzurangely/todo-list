@@ -15,7 +15,7 @@ import FoldersPage from "./features/folders/pages/FoldersPage.jsx";
 import FolderDetailPage from "./features/folders/pages/FolderDetailPage.jsx";
 import NotesPage from "./features/notes/pages/NotesPage.jsx";
 
-/** Composicion de providers y definicion de rutas. */
+/** Composición de providers y definición de rutas. */
 export default function App() {
   return (
     <ThemeProvider>

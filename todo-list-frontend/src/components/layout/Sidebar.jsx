@@ -75,7 +75,7 @@ function SidebarContent({ pendingCount, onNavigate, onCreateFolder }) {
             </li>
           ))}
           {folders.length === 0 && (
-            <li className="px-3 text-xs text-ink-muted">Aun no tienes carpetas.</li>
+            <li className="px-3 text-xs text-ink-muted">Aún no tienes carpetas.</li>
           )}
         </ul>
       </div>
