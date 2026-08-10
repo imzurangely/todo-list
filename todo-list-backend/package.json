@@ -7,9 +7,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "db:schema": "psql \"$DATABASE_URL\" -f sql/schema.sql",
-    "db:seed": "psql \"$DATABASE_URL\" -f sql/seed.sql"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
