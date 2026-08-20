@@ -43,5 +43,5 @@ todo-list/
 
 ## 🚀 Demo & API
 
-* 🌐 Demo: todo-list-000.netlify.app
-* ⚙️ API: [Aquí colocas el link de tu API](https://todo-list-6a4r.onrender.com)
+* 🌐 Demo: [Ver aplicación en vivo](todo-list-000.netlify.app)
+* ⚙️ API: [Ver Api](https://todo-list-6a4r.onrender.com)
