@@ -18,7 +18,7 @@ export default function AppLayout() {
   const pendingCount = useMemo(() => todos.filter((todo) => !todo.completed).length, [todos]);
 
   return (
-    <div className="flex min-h-screen w-full bg-surface">
+    <div className="flex min-h-screen w-full min-w-0 overflow-x-hidden bg-surface">
       <Sidebar
         open={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
@@ -34,7 +34,7 @@ export default function AppLayout() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 sm:py-8"
+          className="mx-auto w-full max-w-6xl min-w-0 flex-1 overflow-x-hidden px-3 py-4 sm:px-5 sm:py-6 md:px-6 md:py-8 lg:px-8"
         >
           <Outlet />
         </motion.main>

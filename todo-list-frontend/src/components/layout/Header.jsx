@@ -6,8 +6,8 @@ import ThemeToggle from "./ThemeToggle.jsx";
 
 export default function Header({ onOpenSidebar, onCreateTodo }) {
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-surface/85 backdrop-blur">
-      <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-6">
+    <header className="sticky top-0 z-30 w-full min-w-0 border-b border-line bg-surface/85 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
+      <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-6 sm:py-3">
         <div className="flex items-center gap-2">
           <span className="lg:hidden">
             <IconButton icon={Menu} label="Abrir menu" onClick={onOpenSidebar} />

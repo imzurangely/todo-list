@@ -61,15 +61,19 @@
 
   html {
     -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
   }
 
   body {
     margin: 0;
+    min-width: 320px;
     background-color: var(--color-surface);
     color: var(--color-ink);
     font-family: var(--font-sans);
     transition: background-color 250ms ease, color 250ms ease;
     overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
 
   h1, h2, h3, h4 {

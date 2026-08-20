@@ -14,7 +14,7 @@ export default function Tooltip({ label, children, side = "top" }) {
       {children}
       <span
         role="tooltip"
-        className={`pointer-events-none absolute left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2 py-1 text-xs font-medium text-surface opacity-0 transition-opacity duration-150 group-hover/tooltip:opacity-100 ${position} ${side === "right" ? "left-full translate-x-0" : ""}`}
+        className={`pointer-events-none absolute left-1/2 z-50 -translate-x-1/2 max-w-[min(16rem,calc(100vw-2rem))] whitespace-normal break-words rounded-md bg-ink px-2 py-1 text-xs font-medium text-surface opacity-0 transition-opacity duration-150 group-hover/tooltip:opacity-100 ${position} ${side === "right" ? "left-full translate-x-0" : ""}`}
       >
         {label}
       </span>

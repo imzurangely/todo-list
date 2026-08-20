@@ -51,7 +51,7 @@ export default function TodoFilters({ filters, onChange, resultCount }) {
           );
         })}
         {typeof resultCount === "number" && (
-          <span className="ml-auto text-xs text-ink-muted">
+          <span className="w-full text-xs text-ink-muted sm:ml-auto sm:w-auto">
             {resultCount} {resultCount === 1 ? "resultado" : "resultados"}
           </span>
         )}

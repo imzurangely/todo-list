@@ -14,9 +14,9 @@ export default function NoteCard({ note, onSelect, onEdit, onDelete, index = 0 }
       transition={{ duration: 0.22, delay: index * 0.04 }}
     >
       <Card interactive className="group flex h-full flex-col p-5">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2 sm:gap-3">
           <button type="button" onClick={() => onSelect(note)} className="min-w-0 text-left">
-            <h3 className="truncate text-base font-semibold text-ink">{note.title}</h3>
+            <h3 className="break-words text-base font-semibold text-ink">{note.title}</h3>
             <p className="mt-0.5 text-xs text-ink-muted">Actualizada el {formatDate(note.updated_at)}</p>
           </button>
           <div className="flex shrink-0 items-center gap-1 opacity-100 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100">

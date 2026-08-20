@@ -19,12 +19,12 @@ export default function FolderCard({ folder, onEdit, onDelete, index = 0 }) {
       transition={{ duration: 0.22, delay: index * 0.04 }}
     >
       <Card interactive className="group p-5">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2 sm:gap-3">
           <Link to={`/carpetas/${folder.id}`} className="min-w-0">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-900/30 dark:text-brand-300">
               <FolderClosed className="h-4.5 w-4.5" aria-hidden="true" />
             </span>
-            <h3 className="mt-3 truncate text-base font-semibold text-ink">{folder.name}</h3>
+            <h3 className="mt-3 break-words text-base font-semibold text-ink">{folder.name}</h3>
             <p className="mt-0.5 text-xs text-ink-muted">Creada el {formatDate(folder.created_at)}</p>
           </Link>
 

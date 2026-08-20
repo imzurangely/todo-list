@@ -22,9 +22,11 @@ export default function NoteDetail({ note, open, onClose, onEdit, onDelete }) {
         </>
       }
     >
-      <p className="whitespace-pre-line text-sm leading-relaxed text-ink-soft">
+      <div className="max-h-[60vh] overflow-y-auto overscroll-contain pr-1 scrollbar-thin">
+        <p className="whitespace-pre-line break-words text-sm leading-relaxed text-ink-soft">
         {note.content || "Esta nota no tiene contenido."}
-      </p>
+        </p>
+      </div>
     </Modal>
   );
 }

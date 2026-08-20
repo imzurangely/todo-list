@@ -18,11 +18,11 @@ export default function TodoItem({ todo, onToggle, onSelect, onEdit, onDelete, s
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: -12, height: 0, marginBottom: 0 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-      className="group"
+      className="group min-w-0"
     >
       <div
         className={cn(
-          "flex items-start gap-3 rounded-2xl border border-line bg-card p-4 transition-all duration-200",
+          "flex min-w-0 items-start gap-2.5 rounded-2xl border border-line bg-card p-3.5 transition-all duration-200 sm:gap-3 sm:p-4",
           "hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-brand",
           todo.completed && "opacity-70",
         )}
@@ -43,7 +43,7 @@ export default function TodoItem({ todo, onToggle, onSelect, onEdit, onDelete, s
         >
           <p
             className={cn(
-              "truncate text-sm font-semibold text-ink transition-all duration-200",
+              "break-words text-sm font-semibold text-ink transition-all duration-200",
               todo.completed && "text-ink-muted line-through",
             )}
           >

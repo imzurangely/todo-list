@@ -36,7 +36,7 @@ function SidebarContent({ pendingCount, onNavigate, onCreateFolder }) {
   };
 
   return (
-    <div className="flex h-full flex-col gap-6 p-4">
+    <div className="flex h-full min-h-0 flex-col gap-5 p-3 pt-4 sm:gap-6 sm:p-4">
       <Logo />
 
       <div className="rounded-xl bg-brand-50 px-3 py-2.5 dark:bg-brand-900/25">
@@ -106,7 +106,7 @@ export default function Sidebar({ open, onClose, pendingCount, onCreateFolder })
     <>
       {/* Desktop */}
       <aside className="hidden w-72 shrink-0 border-r border-line bg-card lg:block">
-        <div className="sticky top-0 h-screen">
+        <div className="sticky top-0 h-[100dvh] overflow-hidden">
           <SidebarContent pendingCount={pendingCount} onCreateFolder={onCreateFolder} />
         </div>
       </aside>
@@ -127,7 +127,7 @@ export default function Sidebar({ open, onClose, pendingCount, onCreateFolder })
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 320, damping: 32 }}
-              className="relative z-10 h-full w-[85%] max-w-xs border-r border-line bg-card"
+              className="relative z-10 h-full min-h-0 w-[min(88vw,20rem)] max-w-xs border-r border-line bg-card pb-[env(safe-area-inset-bottom)]"
               aria-label="Menu lateral"
             >
               <div className="absolute right-3 top-3">

@@ -32,7 +32,7 @@ export default function Button({
   return (
     <Component
       className={cn(
-        "inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-200",
+        "inline-flex min-w-0 items-center justify-center rounded-xl font-semibold transition-all duration-200 touch-manipulation",
         "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400",
         "disabled:cursor-not-allowed disabled:opacity-60 active:scale-[0.97]",
         VARIANTS[variant],
