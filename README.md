@@ -40,3 +40,8 @@ todo-list/
 ├── frontend/   # React · Features + UI components
 └── backend/    # Node.js · Módulos por funcionalidad
 ```
+
+## 🚀 Demo & API
+
+* 🌐 Demo: todo-list-000.netlify.app
+* ⚙️ API: [Aquí colocas el link de tu API](https://todo-list-6a4r.onrender.com)
