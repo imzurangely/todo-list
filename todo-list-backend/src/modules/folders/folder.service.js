@@ -1,5 +1,5 @@
-const ApiError = require("../../utils/ApiError");
-const folderModel = require("./folder.model");
+import ApiError from "../../utils/ApiError.js";
+import folderModel from "./folder.model.js";
 
 const list = (userId) => folderModel.findAll(userId);
 
@@ -35,4 +35,4 @@ const countTodos = async (id, userId) => {
   return folderModel.countTodos(id, userId);
 };
 
-module.exports = { list, getById, create, update, remove, countTodos };
+export default { list, getById, create, update, remove, countTodos };

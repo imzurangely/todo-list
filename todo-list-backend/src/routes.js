@@ -1,9 +1,9 @@
-const { Router } = require("express");
-const authenticate = require("./middlewares/auth");
-const authRoutes = require("./modules/auth/auth.routes");
-const folderRoutes = require("./modules/folders/folder.routes");
-const todoRoutes = require("./modules/todos/todo.routes");
-const noteRoutes = require("./modules/notes/note.routes");
+import { Router } from "express";
+import authenticate from "./middlewares/auth.js";
+import authRoutes from "./modules/auth/auth.routes.js";
+import folderRoutes from "./modules/folders/folder.routes.js";
+import todoRoutes from "./modules/todos/todo.routes.js";
+import noteRoutes from "./modules/notes/note.routes.js";
 
 const router = Router();
 
@@ -14,4 +14,4 @@ router.use("/folders", authenticate, folderRoutes);
 router.use("/todos", authenticate, todoRoutes);
 router.use("/notes", authenticate, noteRoutes);
 
-module.exports = router;
+export default router;

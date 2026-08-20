@@ -1,5 +1,5 @@
-const { Pool } = require("pg");
-const env = require("./env");
+import { Pool } from "pg";
+import env from "./env.js";
 
 const pool = new Pool({
   connectionString: env.databaseUrl,
@@ -29,4 +29,4 @@ const withTransaction = async (callback) => {
   }
 };
 
-module.exports = { pool, query, withTransaction };
+export default { pool, query, withTransaction };

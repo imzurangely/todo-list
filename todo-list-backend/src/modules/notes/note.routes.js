@@ -1,7 +1,7 @@
-const { Router } = require("express");
-const validate = require("../../middlewares/validate");
-const controller = require("./note.controller");
-const { idParamSchema, noteSchema } = require("./note.validation");
+import { Router } from "express";
+import validate from "../../middlewares/validate.js";
+import controller from "./note.controller.js";
+import { idParamSchema, noteSchema } from "./note.validation.js";
 
 const router = Router();
 
@@ -11,4 +11,4 @@ router.get("/:id", validate(idParamSchema, "params"), controller.getById);
 router.put("/:id", validate(idParamSchema, "params"), validate(noteSchema), controller.update);
 router.delete("/:id", validate(idParamSchema, "params"), controller.remove);
 
-module.exports = router;
+export default router;

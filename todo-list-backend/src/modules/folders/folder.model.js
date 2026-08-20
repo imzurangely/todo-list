@@ -1,4 +1,4 @@
-const db = require("../../config/database");
+import db from "../../config/database.js";
 
 const COLUMNS = "id, user_id, name, created_at, updated_at";
 
@@ -69,4 +69,4 @@ const countTodos = async (id, userId) => {
   return rows[0].total;
 };
 
-module.exports = { findAll, findById, findByName, create, update, remove, countTodos };
+export default { findAll, findById, findByName, create, update, remove, countTodos };

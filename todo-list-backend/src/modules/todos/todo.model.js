@@ -1,4 +1,4 @@
-const db = require("../../config/database");
+import db from "../../config/database.js";
 
 const SELECT_BASE = `
   SELECT t.id, t.folder_id, t.title, t.description, t.due_date, t.priority,
@@ -101,4 +101,4 @@ const stats = async (userId) => {
   return rows[0];
 };
 
-module.exports = { findAll, findById, create, update, updateStatus, remove, stats };
+export default { findAll, findById, create, update, updateStatus, remove, stats };

@@ -1,13 +1,7 @@
-const { Router } = require("express");
-const validate = require("../../middlewares/validate");
-const controller = require("./todo.controller");
-const {
-  idParamSchema,
-  createTodoSchema,
-  updateTodoSchema,
-  statusSchema,
-  listQuerySchema,
-} = require("./todo.validation");
+import { Router } from "express";
+import validate from "../../middlewares/validate.js";
+import controller from "./todo.controller.js";
+import { idParamSchema, createTodoSchema, updateTodoSchema, statusSchema, listQuerySchema,  } from "./todo.validation.js";
 
 const router = Router();
 
@@ -24,4 +18,4 @@ router.patch(
 );
 router.delete("/:id", validate(idParamSchema, "params"), controller.remove);
 
-module.exports = router;
+export default router;

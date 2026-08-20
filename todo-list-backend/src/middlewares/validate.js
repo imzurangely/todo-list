@@ -1,4 +1,4 @@
-const ApiError = require("../utils/ApiError");
+import ApiError from "../utils/ApiError.js";
 
 /** Valida req[source] con un schema de Zod y reemplaza el valor por el parseado. */
 const validate = (schema, source = "body") => (req, _res, next) => {
@@ -14,4 +14,4 @@ const validate = (schema, source = "body") => (req, _res, next) => {
   return next();
 };
 
-module.exports = validate;
+export default validate;

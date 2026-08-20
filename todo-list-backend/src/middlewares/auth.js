@@ -1,6 +1,6 @@
-const jwt = require("jsonwebtoken");
-const env = require("../config/env");
-const ApiError = require("../utils/ApiError");
+import jwt from "jsonwebtoken";
+import env from "../config/env.js";
+import ApiError from "../utils/ApiError.js";
 
 /** Verifica el Bearer token y expone req.user = { id, email }. */
 const authenticate = (req, _res, next) => {
@@ -20,4 +20,4 @@ const authenticate = (req, _res, next) => {
   }
 };
 
-module.exports = authenticate;
+export default authenticate;

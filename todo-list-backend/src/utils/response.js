@@ -5,4 +5,4 @@ const success = (res, { data = null, message = "Operacion exitosa", status = 200
 /** Respuesta 204 sin contenido. */
 const noContent = (res) => res.status(204).send();
 
-module.exports = { success, noContent };
+export { success, noContent };

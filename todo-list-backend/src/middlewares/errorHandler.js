@@ -1,5 +1,5 @@
-const env = require("../config/env");
-const ApiError = require("../utils/ApiError");
+import env from "../config/env.js";
+import ApiError from "../utils/ApiError.js";
 
 /** Manejo centralizado de errores: nunca expone detalles tecnicos al cliente. */
 // eslint-disable-next-line no-unused-vars
@@ -28,4 +28,4 @@ const errorHandler = (error, _req, res, _next) => {
   });
 };
 
-module.exports = errorHandler;
+export default errorHandler;

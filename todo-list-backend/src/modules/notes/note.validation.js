@@ -1,4 +1,4 @@
-const { z } = require("zod");
+import { z } from "zod";
 
 const idParamSchema = z.object({
   id: z.coerce.number().int().positive("El identificador no es valido"),
@@ -12,4 +12,4 @@ const noteSchema = z.object({
     .transform((value) => (value ? value : "")),
 });
 
-module.exports = { idParamSchema, noteSchema };
+export { idParamSchema, noteSchema };

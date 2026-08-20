@@ -1,4 +1,4 @@
-const db = require("../../config/database");
+import db from "../../config/database.js";
 
 const PUBLIC_COLUMNS = "id, name, email, created_at, updated_at";
 
@@ -26,4 +26,4 @@ const create = async ({ name, email, passwordHash }) => {
   return rows[0];
 };
 
-module.exports = { findByEmail, findById, create };
+export default { findByEmail, findById, create };

@@ -1,4 +1,4 @@
-const db = require("../../config/database");
+import db from "../../config/database.js";
 
 const COLUMNS = "id, user_id, title, content, created_at, updated_at";
 
@@ -44,4 +44,4 @@ const remove = async (id, userId) => {
   return rowCount > 0;
 };
 
-module.exports = { findAll, findById, create, update, remove };
+export default { findAll, findById, create, update, remove };

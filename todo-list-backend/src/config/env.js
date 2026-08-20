@@ -1,4 +1,6 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+
+dotenv.config();
 
 /** Lee una variable de entorno obligatoria y falla rapido si no existe. */
 const required = (key, fallback) => {
@@ -24,4 +26,4 @@ const env = {
 
 env.isProduction = env.nodeEnv === "production";
 
-module.exports = env;
+export default env;

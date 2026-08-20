@@ -1,8 +1,8 @@
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const env = require("../../config/env");
-const ApiError = require("../../utils/ApiError");
-const userModel = require("./user.model");
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import env from "../../config/env.js";
+import ApiError from "../../utils/ApiError.js";
+import userModel from "./user.model.js";
 
 const SALT_ROUNDS = 10;
 
@@ -37,4 +37,4 @@ const getProfile = async (userId) => {
   return user;
 };
 
-module.exports = { register, login, getProfile };
+export default { register, login, getProfile };

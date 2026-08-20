@@ -1,6 +1,6 @@
-const asyncHandler = require("../../utils/asyncHandler");
-const { success } = require("../../utils/response");
-const authService = require("./auth.service");
+import asyncHandler from "../../utils/asyncHandler.js";
+import { success } from "../../utils/response.js";
+import authService from "./auth.service.js";
 
 const register = asyncHandler(async (req, res) => {
   const data = await authService.register(req.body);
@@ -17,4 +17,4 @@ const me = asyncHandler(async (req, res) => {
   return success(res, { data, message: "Perfil obtenido correctamente" });
 });
 
-module.exports = { register, login, me };
+export default { register, login, me };

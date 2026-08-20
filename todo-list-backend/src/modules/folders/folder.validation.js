@@ -1,4 +1,4 @@
-const { z } = require("zod");
+import { z } from "zod";
 
 const idParamSchema = z.object({
   id: z.coerce.number().int().positive("El identificador no es valido"),
@@ -10,4 +10,4 @@ const createFolderSchema = z.object({
 
 const updateFolderSchema = createFolderSchema;
 
-module.exports = { idParamSchema, createFolderSchema, updateFolderSchema };
+export { idParamSchema, createFolderSchema, updateFolderSchema };

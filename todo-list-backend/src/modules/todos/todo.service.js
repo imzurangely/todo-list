@@ -1,6 +1,6 @@
-const ApiError = require("../../utils/ApiError");
-const folderService = require("../folders/folder.service");
-const todoModel = require("./todo.model");
+import ApiError from "../../utils/ApiError.js";
+import folderService from "../folders/folder.service.js";
+import todoModel from "./todo.model.js";
 
 const toFilters = (query = {}) => ({
   folderId: query.folderId,
@@ -59,4 +59,4 @@ const remove = async (id, userId) => {
 
 const stats = (userId) => todoModel.stats(userId);
 
-module.exports = { list, getById, create, update, updateStatus, remove, stats };
+export default { list, getById, create, update, updateStatus, remove, stats };

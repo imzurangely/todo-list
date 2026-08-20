@@ -1,5 +1,5 @@
-const ApiError = require("../../utils/ApiError");
-const noteModel = require("./note.model");
+import ApiError from "../../utils/ApiError.js";
+import noteModel from "./note.model.js";
 
 const list = (userId) => noteModel.findAll(userId);
 
@@ -22,4 +22,4 @@ const remove = async (id, userId) => {
   if (!deleted) throw ApiError.notFound("La nota no existe");
 };
 
-module.exports = { list, getById, create, update, remove };
+export default { list, getById, create, update, remove };

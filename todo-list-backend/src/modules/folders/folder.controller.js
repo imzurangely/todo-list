@@ -1,6 +1,6 @@
-const asyncHandler = require("../../utils/asyncHandler");
-const { success, noContent } = require("../../utils/response");
-const folderService = require("./folder.service");
+import asyncHandler from "../../utils/asyncHandler.js";
+import { success, noContent } from "../../utils/response.js";
+import folderService from "./folder.service.js";
 
 const list = asyncHandler(async (req, res) => {
   const data = await folderService.list(req.user.id);
@@ -27,4 +27,4 @@ const remove = asyncHandler(async (req, res) => {
   return noContent(res);
 });
 
-module.exports = { list, getById, create, update, remove };
+export default { list, getById, create, update, remove };

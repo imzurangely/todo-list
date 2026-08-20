@@ -4,7 +4,7 @@
   "private": true,
   "description": "API REST modular para la aplicacion To-Do List (Node.js + Express + PostgreSQL)",
   "main": "src/index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
