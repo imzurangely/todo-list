@@ -12,6 +12,10 @@ app.use(cors({ origin: env.corsOrigin, credentials: true }));
 app.use(express.json({ limit: "1mb" }));
 if (!env.isProduction) app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.json({ mensaje: "¡Servidor API en línea y funcionando!" });
+});
+
 app.use("/api", routes);
 
 app.use(notFound);
